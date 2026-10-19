@@ -349,3 +349,202 @@ body {
     padding-top: 4.5rem;
   }
 }
+
+
+/* Motion layer: soft glow, focus states, and scroll reveals */
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 0;
+  height: 3px;
+  z-index: 120;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(194, 65, 12, 0.35);
+  transition: width 0.12s linear;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: min(42rem, 78vw);
+  height: min(42rem, 78vw);
+  top: -16rem;
+  right: -12rem;
+  z-index: -2;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(194, 65, 12, 0.18), transparent 58%),
+    radial-gradient(circle at 65% 60%, rgba(241, 239, 233, 0.9), transparent 70%);
+  filter: blur(4px);
+  animation: heroDrift 16s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 1rem 1.5rem auto;
+  height: 16rem;
+  z-index: -1;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(194, 65, 12, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(194, 65, 12, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+  pointer-events: none;
+}
+
+.hero-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  max-width: 34rem;
+  margin-bottom: 1.75rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.signal-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(194, 65, 12, 0.28);
+  animation: signalPulse 2.4s ease-out infinite;
+}
+
+.signal-rule {
+  width: 2.25rem;
+  height: 1px;
+  background: var(--border);
+}
+
+.signal-meta {
+  color: var(--accent);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+html.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.js-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.project-card,
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.25s,
+    box-shadow 0.3s;
+}
+
+.project-card::before,
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    240px circle at var(--x, 50%) var(--y, 50%),
+    rgba(194, 65, 12, 0.16),
+    transparent 66%
+  );
+  transition: opacity 0.25s ease;
+}
+
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(31, 30, 28, 0.1);
+}
+
+.project-card:hover::before,
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.project-card > *,
+.skill-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.project-meta span:first-child {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.project-link {
+  transition: color 0.2s, transform 0.2s;
+}
+
+.project-link:hover {
+  transform: translateX(4px);
+}
+
+@keyframes heroDrift {
+  from { transform: translate3d(-1rem, 0, 0) scale(0.96); }
+  to { transform: translate3d(1rem, 1.5rem, 0) scale(1.04); }
+}
+
+@keyframes signalPulse {
+  0% { box-shadow: 0 0 0 0 rgba(194, 65, 12, 0.28); }
+  70% { box-shadow: 0 0 0 8px rgba(194, 65, 12, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(194, 65, 12, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .signal-dot {
+    animation: none;
+  }
+
+  html.js-ready .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-signal {
+    flex-wrap: wrap;
+    row-gap: 0.45rem;
+  }
+
+  .signal-rule {
+    flex: 1 1 2rem;
+  }
+}
