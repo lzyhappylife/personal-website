@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <header class="site-header" id="top">
     <nav class="nav">
       <a class="nav-logo" href="#top">LZY</a>
@@ -30,26 +32,32 @@
 
   <main>
     <section class="hero">
-      <p class="hero-hello">你好，我是</p>
-      <h1 class="hero-name">LZY</h1>
-      <p class="hero-tagline">一个热爱创造、持续学习的人。</p>
-      <p class="hero-sub">
+      <p class="hero-hello reveal">你好，我是</p>
+      <h1 class="hero-name reveal">LZY</h1>
+      <p class="hero-tagline reveal">一个热爱创造、持续学习的人。</p>
+      <p class="hero-sub reveal">
         这里是我的个人主页，记录我在做的事、学的东西，以及一些想法。
       </p>
-      <div class="hero-actions">
+      <div class="hero-signal reveal" aria-label="网站状态">
+        <span class="signal-dot" aria-hidden="true"></span>
+        <span>BUILDING AI PRODUCTS IN PUBLIC</span>
+        <span class="signal-rule" aria-hidden="true"></span>
+        <span class="signal-meta">01 / 04</span>
+      </div>
+      <div class="hero-actions reveal">
         <a class="btn btn-primary" href="#projects">看看我的项目</a>
         <a class="btn btn-ghost" href="#contact">联系我</a>
       </div>
     </section>
 
     <section class="section" id="about">
-      <h2 class="section-title">关于我</h2>
+      <h2 class="section-title reveal">关于我</h2>
       <div class="about-grid">
-        <p class="about-text">
+        <p class="about-text reveal">
           我专注于把想法变成可用、好看的东西。相信持续学习和动手实践比空谈更重要，
           喜欢在一次次尝试中把问题弄明白。业余时间写代码、读点书、整理自己的知识库。
         </p>
-        <ul class="about-facts">
+        <ul class="about-facts reveal">
           <li><span>📍</span> 所在地：待填写</li>
           <li><span>💼</span> 方向：待填写</li>
           <li><span>🎯</span> 兴趣：编程 · 阅读 · 写作</li>
@@ -60,7 +68,7 @@
     <section class="section" id="skills">
       <h2 class="section-title">技能</h2>
       <div class="skills-grid">
-        <div class="skill-card">
+        <div class="skill-card reveal" data-spotlight>
           <h3>前端开发</h3>
           <p>HTML / CSS / JavaScript，搭建响应式、干净的界面。</p>
         </div>
@@ -78,22 +86,26 @@
     <section class="section" id="projects">
       <h2 class="section-title">项目</h2>
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card reveal" data-spotlight>
+          <div class="project-meta"><span>01</span><span>FEATURED</span></div>
           <h3>Personal Website</h3>
           <p>A lightweight, responsive personal site with dark mode, deployed on GitHub Pages.</p>
           <a class="project-link" href="https://github.com/lzyhappylife/personal-website" target="_blank" rel="noopener">GitHub →</a>
         </article>
         <article class="project-card">
+          <div class="project-meta"><span>02</span><span>AI PRODUCT</span></div>
           <h3>Xiao Zhi Customer Support · Chatflow Evaluation &amp; Optimization</h3>
           <p>Built a scored 25-question evaluation loop for the Wushaxia Valley support scenario, raising the final regression pass rate from 52% to 100%.</p>
           <a class="project-link" href="https://udify.app/chat/0HxeLfESFNkN6Tz9" target="_blank" rel="noopener">Try the Dify Demo →</a>
         </article>
         <article class="project-card">
+          <div class="project-meta"><span>03</span><span>LEARNING SYSTEM</span></div>
           <h3>Learning Partner · AI Study Companion</h3>
           <p>Built with Dify Cloud and a course knowledge base for interview coaching, quizzes, automated grading, mind maps, web search, and note organization.</p>
           <a class="project-link" href="https://udify.app/chat/PocOUbKPp6ocYKi8" target="_blank" rel="noopener">Try the Dify Demo →</a>
         </article>
         <article class="project-card">
+          <div class="project-meta"><span>04</span><span>MODEL PRACTICE</span></div>
           <h3>LoRA Fine-Tuning &amp; Dify Deployment</h3>
           <p>Fine-tuned Qwen2.5-0.5B and connected it to Dify through dataset conversion, training configuration, API exposure, and Agent validation.</p>
         </article>
@@ -102,10 +114,10 @@
 
     <section class="section" id="contact">
       <h2 class="section-title">联系我</h2>
-      <p class="contact-text">
+      <p class="contact-text reveal">
         有想聊的事情、合作的想法，欢迎通过邮件或 GitHub 找到我。
       </p>
-      <div class="contact-links">
+      <div class="contact-links reveal">
         <a class="btn btn-primary" href="mailto:454035647@qq.com">发邮件</a>
         <a class="btn btn-ghost" href="https://github.com/lzyhappylife" target="_blank" rel="noopener">GitHub</a>
       </div>
