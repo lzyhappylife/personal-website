@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LZY · 个人主页</title>
+  <meta name="description" content="LZY 的个人主页" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a class="nav-logo" href="#top">LZY</a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+            <span class="theme-icon" id="themeIcon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-hello">你好，我是</p>
+      <h1 class="hero-name">LZY</h1>
+      <p class="hero-tagline">一个热爱创造、持续学习的人。</p>
+      <p class="hero-sub">
+        这里是我的个人主页，记录我在做的事、学的东西，以及一些想法。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">看看我的项目</a>
+        <a class="btn btn-ghost" href="#contact">联系我</a>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-grid">
+        <p class="about-text">
+          我专注于把想法变成可用、好看的东西。相信持续学习和动手实践比空谈更重要，
+          喜欢在一次次尝试中把问题弄明白。业余时间写代码、读点书、整理自己的知识库。
+        </p>
+        <ul class="about-facts">
+          <li><span>📍</span> 所在地：待填写</li>
+          <li><span>💼</span> 方向：待填写</li>
+          <li><span>🎯</span> 兴趣：编程 · 阅读 · 写作</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section-title">技能</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>前端开发</h3>
+          <p>HTML / CSS / JavaScript，搭建响应式、干净的界面。</p>
+        </div>
+        <div class="skill-card">
+          <h3>工具与效率</h3>
+          <p>Git、命令行、自动化脚本，让重复的事情自动完成。</p>
+        </div>
+        <div class="skill-card">
+          <h3>内容与整理</h3>
+          <p>写作、知识库整理，把复杂的事情讲清楚。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section-title">项目</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>个人网站</h3>
+          <p>你现在看到的这个主页，纯静态、响应式，托管在 GitHub Pages。</p>
+          <a class="project-link" href="https://github.com/lzyhappylife" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+        <article class="project-card">
+          <h3>项目二</h3>
+          <p>这里可以放你的下一个作品，简单介绍一下它解决了什么问题。</p>
+        </article>
+        <article class="project-card">
+          <h3>项目三</h3>
+          <p>这里可以放你的下一个作品，简单介绍一下它解决了什么问题。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 class="section-title">联系我</h2>
+      <p class="contact-text">
+        有想聊的事情、合作的想法，欢迎通过邮件或 GitHub 找到我。
+      </p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:454035647@qq.com">发邮件</a>
+        <a class="btn btn-ghost" href="https://github.com/lzyhappylife" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> LZY · 用 ❤️ 搭建</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
