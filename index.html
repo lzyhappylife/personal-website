@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LZY · 个人主页</title>
-  <meta name="description" content="LZY 的个人主页" />
+  <meta name="theme-color" content="#0b0d12" />
+  <title>楼致远 · AI 产品负责人 / Builder</title>
+  <meta name="description" content="楼致远的个人作品集：AI 产品、Agent 系统、评测闭环与可交付的产品实践。" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <nav class="nav">
-      <a class="nav-logo" href="#top">LZY</a>
-      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-logo" href="#top"><span class="logo-mark">L</span><span>LZ / AI PRODUCT</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about">关于</a></li>
-        <li><a href="#skills">技能</a></li>
-        <li><a href="#projects">项目</a></li>
+        <li><a href="#cases">案例</a></li>
+        <li><a href="#builds">开源</a></li>
+        <li><a href="#experience">经历</a></li>
         <li><a href="#contact">联系</a></li>
         <li>
           <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
-            <span class="theme-icon" id="themeIcon">🌙</span>
+            <span class="theme-icon" id="themeIcon">☼</span>
           </button>
         </li>
       </ul>
@@ -31,101 +33,242 @@
   </header>
 
   <main>
-    <section class="hero">
-      <p class="hero-hello reveal">你好，我是</p>
-      <h1 class="hero-name reveal">LZY</h1>
-      <p class="hero-tagline reveal">一个热爱创造、持续学习的人。</p>
-      <p class="hero-sub reveal">
-        这里是我的个人主页，记录我在做的事、学的东西，以及一些想法。
-      </p>
-      <div class="hero-signal reveal" aria-label="网站状态">
-        <span class="signal-dot" aria-hidden="true"></span>
-        <span>BUILDING AI PRODUCTS IN PUBLIC</span>
-        <span class="signal-rule" aria-hidden="true"></span>
-        <span class="signal-meta">01 / 04</span>
-      </div>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" href="#projects">看看我的项目</a>
-        <a class="btn btn-ghost" href="#contact">联系我</a>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <h2 class="section-title reveal">关于我</h2>
-      <div class="about-grid">
-        <p class="about-text reveal">
-          我专注于把想法变成可用、好看的东西。相信持续学习和动手实践比空谈更重要，
-          喜欢在一次次尝试中把问题弄明白。业余时间写代码、读点书、整理自己的知识库。
+    <section class="hero section-shell" id="about">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="eyebrow-dot"></span> AI PRODUCT · AGENT SYSTEMS · EVALS</p>
+        <h1 class="hero-name reveal">楼致远<span class="hero-name-dot">.</span></h1>
+        <p class="hero-title reveal">把复杂 AI，做成用户真正用得上的产品。</p>
+        <p class="hero-sub reveal">
+          AI 产品负责人 / Builder。专注 Agent 产品、长期记忆、多模态生成与评测治理，
+          把用户问题拆成可验证的系统，再把系统打磨成可交付的体验。
         </p>
-        <ul class="about-facts reveal">
-          <li><span>📍</span> 所在地：待填写</li>
-          <li><span>💼</span> 方向：待填写</li>
-          <li><span>🎯</span> 兴趣：编程 · 阅读 · 写作</li>
-        </ul>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#cases">看我的案例 <span>↗</span></a>
+          <a class="btn btn-ghost" href="mailto:454035647@qq.com">和我聊聊 <span>↗</span></a>
+        </div>
+        <div class="hero-meta reveal">
+          <span><b class="status-dot"></b> OPEN TO AI PRODUCT ROLES</span>
+          <span>SHANGHAI · CHINA</span>
+        </div>
+      </div>
+      <div class="hero-orbit reveal" aria-label="能力关键词">
+        <div class="orbit-grid"></div>
+        <div class="orbit-ring orbit-ring-a"></div>
+        <div class="orbit-ring orbit-ring-b"></div>
+        <div class="orbit-core">
+          <span class="core-kicker">BUILD / MEASURE / LEARN</span>
+          <strong>AI<br />PRODUCT</strong>
+          <span class="core-line"></span>
+          <span class="core-caption">从用户问题到可回归系统</span>
+        </div>
+        <span class="orbit-label orbit-label-a">AGENT</span>
+        <span class="orbit-label orbit-label-b">RAG</span>
+        <span class="orbit-label orbit-label-c">EVALS</span>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <h2 class="section-title">技能</h2>
-      <div class="skills-grid">
-        <div class="skill-card reveal" data-spotlight>
-          <h3>前端开发</h3>
-          <p>HTML / CSS / JavaScript，搭建响应式、干净的界面。</p>
-        </div>
-        <div class="skill-card">
-          <h3>工具与效率</h3>
-          <p>Git、命令行、自动化脚本，让重复的事情自动完成。</p>
-        </div>
-        <div class="skill-card">
-          <h3>内容与整理</h3>
-          <p>写作、知识库整理，把复杂的事情讲清楚。</p>
-        </div>
+    <section class="metric-strip section-shell reveal" aria-label="个人概览">
+      <div class="metric"><strong>10+</strong><span>年产品经验</span></div>
+      <div class="metric"><strong>4</strong><span>AI 产品案例</span></div>
+      <div class="metric"><strong>300+</strong><span>评测 Golden Set</span></div>
+      <div class="metric"><strong>$0.035</strong><span>单张生图成本</span></div>
+    </section>
+
+    <section class="section section-shell" id="focus">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 / HOW I WORK</p>
+        <h2>我把 AI 产品做成三条闭环。</h2>
+        <p>先把体验说清楚，再把系统搭起来，最后让每次迭代都能被验证。</p>
+      </div>
+      <div class="principles-grid">
+        <article class="principle-card reveal" data-spotlight>
+          <span class="principle-index">01</span>
+          <h3>从真实场景出发</h3>
+          <p>把用户访谈、工单和 bad case 变成可排期的问题，不让“AI 很酷”替代产品判断。</p>
+          <span class="principle-tag">PRODUCT SENSE</span>
+        </article>
+        <article class="principle-card reveal" data-spotlight>
+          <span class="principle-index">02</span>
+          <h3>让 Agent 协作有边界</h3>
+          <p>用记忆层、工具调用和明确的任务流组织复杂能力，控制身份污染、递归和不可控状态。</p>
+          <span class="principle-tag">SYSTEM DESIGN</span>
+        </article>
+        <article class="principle-card reveal" data-spotlight>
+          <span class="principle-index">03</span>
+          <h3>把效果变成数据</h3>
+          <p>用 Golden Set、LLM-as-Judge 和回归门禁追踪变化，让“感觉变好了”变成可复现的证据。</p>
+          <span class="principle-tag">EVALUATION</span>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <h2 class="section-title">项目</h2>
-      <div class="projects-grid">
-        <article class="project-card reveal" data-spotlight>
-          <div class="project-meta"><span>01</span><span>FEATURED</span></div>
+    <section class="section section-shell" id="cases">
+      <div class="section-head reveal">
+        <p class="eyebrow">02 / SELECTED CASES</p>
+        <h2>最近在做的四件事。</h2>
+        <p>每个案例都从一个具体痛点开始，最后落到产品结构、工程约束和验证方法。</p>
+      </div>
+      <div class="case-list">
+        <article class="case-card case-featured reveal" data-spotlight>
+          <div class="case-topline"><span>01</span><span>AGENT PRODUCT · 2026 — NOW</span></div>
+          <div class="case-layout">
+            <div>
+              <h3>小手机</h3>
+              <p class="case-lead">让 AI 角色不只会聊天，而是像住在一部手机里，拥有自己的关系、记忆和生活。</p>
+              <div class="case-tags"><span>多 Agent 协作</span><span>长期记忆</span><span>安全护栏</span><span>Tool use</span></div>
+            </div>
+            <div class="case-detail">
+              <p><b>我的工作</b> 产品负责人 + 架构设计</p>
+              <p><b>关键设计</b> 三层记忆模型、共享记忆间接协作、角色切换继承规则、输入到输出的分层防御。</p>
+              <p><b>产品结果</b> 7 个角色、5 个场景 App，让聊天自然流向电话、日历、朋友圈和日记等动作。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal" data-spotlight>
+          <div class="case-topline"><span>02</span><span>MULTIMODAL · COST ENGINEERING</span></div>
+          <h3>AI 婚纱馆</h3>
+          <p class="case-lead">用一张正面照生成有故事感的专属婚纱照，把“想拍但太贵、太折腾”变成轻量体验。</p>
+          <div class="case-detail">
+            <p><b>链路</b> 视觉理解 → SDXL 生成 → 人脸一致性与姿态约束 → 后期修复</p>
+            <p><b>优化</b> 结果缓存、中间结果复用、采样步数优化，让单张综合成本从 $0.08 降到 $0.035。</p>
+          </div>
+          <div class="case-tags"><span>CLIP Vision</span><span>IP-Adapter</span><span>ControlNet</span></div>
+        </article>
+
+        <article class="case-card reveal" data-spotlight>
+          <div class="case-topline"><span>03</span><span>RAG · KNOWLEDGE PRODUCT</span></div>
+          <h3>店智参谋</h3>
+          <p class="case-lead">把代运营方法论变成餐饮老板可以直接追问、直接执行的知识助手。</p>
+          <div class="case-detail">
+            <p><b>链路</b> 文档解析、按场景切片、Metadata 标注、混合召回与 Rerank。</p>
+            <p><b>原则</b> 答案必须带来源章节，无法找到依据时明确说不知道。</p>
+          </div>
+          <div class="case-tags"><span>Hybrid Retrieval</span><span>Rerank</span><span>引用溯源</span></div>
+        </article>
+
+        <article class="case-card reveal" data-spotlight>
+          <div class="case-topline"><span>04</span><span>EVALUATION · REGRESSION LOOP</span></div>
+          <h3>面智评</h3>
+          <p class="case-lead">把“面试 Agent 行不行”从主观感受变成可度量、可回归的工程化流程。</p>
+          <div class="case-detail">
+            <p><b>方法</b> 300+ Golden Set，按岗位、难度和阶段分类，覆盖问题质量、追问能力、反馈准确性与体验一致性。</p>
+            <p><b>闭环</b> 标注 → 评测 → bad case 分类 → Prompt / 检索调优 → 回归验证。</p>
+          </div>
+          <div class="case-tags"><span>LLM-as-Judge</span><span>Golden Set</span><span>回归门禁</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="builds">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 / PUBLIC BUILDS</p>
+        <h2>公开仓库里的我。</h2>
+        <p>产品判断之外，我也把工具、文档和可复用的方法真正做出来。</p>
+      </div>
+      <div class="builds-grid">
+        <a class="build-card build-card-main reveal" data-spotlight href="https://github.com/lzyhappylife/ai-pm-docs" target="_blank" rel="noopener">
+          <div class="build-meta"><span>01</span><span>SKILL / DOCS</span></div>
+          <h3>AI PM Docs</h3>
+          <p>覆盖 AI 产品从立项到上线的 27 份文档模板，包含 Agent、RAG、评测和 VOC 闭环。</p>
+          <span class="build-link">查看仓库 ↗</span>
+        </a>
+        <a class="build-card reveal" data-spotlight href="https://github.com/lzyhappylife/fanzha-app-landing" target="_blank" rel="noopener">
+          <div class="build-meta"><span>02</span><span>WEB / PRODUCT PAGE</span></div>
+          <h3>反诈 App 宣传页</h3>
+          <p>单文件、自包含的产品介绍页，包含数据叙事、动效与响应式体验。</p>
+          <span class="build-link">查看仓库 ↗</span>
+        </a>
+        <a class="build-card reveal" data-spotlight href="https://github.com/lzyhappylife/dsh-pet-indesktop" target="_blank" rel="noopener">
+          <div class="build-meta"><span>03</span><span>PYTHON / DESKTOP</span></div>
+          <h3>桌面宠物</h3>
+          <p>独立桌面宠物、动画状态、系统托盘和可选 AI 对话能力。</p>
+          <span class="build-link">查看仓库 ↗</span>
+        </a>
+        <a class="build-card reveal" data-spotlight href="https://github.com/lzyhappylife/rea" target="_blank" rel="noopener">
+          <div class="build-meta"><span>04</span><span>RESEARCH TOOLING</span></div>
+          <h3>REA</h3>
+          <p>把复杂软件分析变成可调用的工具链，支持从浏览器到原生二进制的证据化调查。</p>
+          <span class="build-link">查看仓库 ↗</span>
+        </a>
+        <a class="build-card reveal" data-spotlight href="https://github.com/lzyhappylife/personal-website" target="_blank" rel="noopener">
+          <div class="build-meta"><span>05</span><span>THIS SITE</span></div>
           <h3>Personal Website</h3>
-          <p>A lightweight, responsive personal site with dark mode, deployed on GitHub Pages.</p>
-          <a class="project-link" href="https://github.com/lzyhappylife/personal-website" target="_blank" rel="noopener">GitHub →</a>
+          <p>持续迭代中的个人作品集，用更清晰的方式记录我在做什么。</p>
+          <span class="build-link">查看仓库 ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="experience">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 / EXPERIENCE</p>
+        <h2>从增长与交易，到 AI 系统。</h2>
+        <p>我一直在做同一件事：把复杂问题拆开，把用户反馈带回产品。</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2026 — NOW</div>
+          <div class="timeline-body">
+            <h3>AI 产品负责人 / Builder</h3>
+            <p>Agent 产品、多模态生成、RAG 知识库、评测体系与安全治理。</p>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-meta"><span>02</span><span>AI PRODUCT</span></div>
-          <h3>Xiao Zhi Customer Support · Chatflow Evaluation &amp; Optimization</h3>
-          <p>Built a scored 25-question evaluation loop for the Wushaxia Valley support scenario, raising the final regression pass rate from 52% to 100%.</p>
-          <a class="project-link" href="https://udify.app/chat/0HxeLfESFNkN6Tz9" target="_blank" rel="noopener">Try the Dify Demo →</a>
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2022.05 — 2023.07</div>
+          <div class="timeline-body">
+            <h3>美团收银系统产品经理 · 汉海信息</h3>
+            <p>围绕扫码点餐、成本卡、私域运营服务中小餐饮商户，累计处理 1000+ 商户工单。</p>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-meta"><span>03</span><span>LEARNING SYSTEM</span></div>
-          <h3>Learning Partner · AI Study Companion</h3>
-          <p>Built with Dify Cloud and a course knowledge base for interview coaching, quizzes, automated grading, mind maps, web search, and note organization.</p>
-          <a class="project-link" href="https://udify.app/chat/PocOUbKPp6ocYKi8" target="_blank" rel="noopener">Try the Dify Demo →</a>
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2021.11 — 2022.05</div>
+          <div class="timeline-body">
+            <h3>增长产品经理 · 上海大夜文化</h3>
+            <p>搭建企业客户自然增长体系，设计自传播、转化漏斗和数据归因。</p>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-meta"><span>04</span><span>MODEL PRACTICE</span></div>
-          <h3>LoRA Fine-Tuning &amp; Dify Deployment</h3>
-          <p>Fine-tuned Qwen2.5-0.5B and connected it to Dify through dataset conversion, training configuration, API exposure, and Agent validation.</p>
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2015.09 — 2021.09</div>
+          <div class="timeline-body">
+            <h3>产品经理 · 上海星家网络</h3>
+            <p>负责「易稿」微信小程序与 Web 站的产品迭代，搭建用户成长和老带新机制。</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <h2 class="section-title">联系我</h2>
-      <p class="contact-text reveal">
-        有想聊的事情、合作的想法，欢迎通过邮件或 GitHub 找到我。
-      </p>
-      <div class="contact-links reveal">
-        <a class="btn btn-primary" href="mailto:454035647@qq.com">发邮件</a>
-        <a class="btn btn-ghost" href="https://github.com/lzyhappylife" target="_blank" rel="noopener">GitHub</a>
+    <section class="section section-shell writing-section">
+      <div class="writing-card reveal">
+        <div>
+          <p class="eyebrow">05 / WRITING</p>
+          <h2>我也写下产品判断。</h2>
+        </div>
+        <div class="writing-links">
+          <a href="https://mp.weixin.qq.com/s/KqAvvznbZT4MpgFBnR2Qsg" target="_blank" rel="noopener">企业 AI 幻觉治理的完整闭环 <span>↗</span></a>
+          <a href="https://mp.weixin.qq.com/s/Ulw0d2oQXb9uSWP5XLEGGw" target="_blank" rel="noopener">给 Agent 少喂一点：上下文信号密度 <span>↗</span></a>
+          <a href="https://github.com/lzyhappylife" target="_blank" rel="noopener">更多文章与实验 <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell contact-section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow">06 / LET'S TALK</p>
+        <h2>如果你也在把 AI 做成产品，欢迎来聊。</h2>
+        <p>适合聊产品 0→1、Agent 架构、评测治理、AI 产品岗位或一个还没想清楚的想法。</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:454035647@qq.com">454035647@qq.com <span>↗</span></a>
+          <a class="btn btn-ghost" href="https://github.com/lzyhappylife" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+          <a class="btn btn-ghost" href="https://www.xiaohongshu.com/user/profile/61c00b8f000000001000c0a3" target="_blank" rel="noopener">小红书 <span>↗</span></a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> LZY · 用 ❤️ 搭建</p>
+    <p>© <span id="year"></span> 楼致远 · Think → Act → Review → Consolidate</p>
+    <a href="#top">回到顶部 ↑</a>
   </footer>
 
   <script src="assets/js/main.js"></script>
